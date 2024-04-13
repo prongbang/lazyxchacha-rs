@@ -1,7 +1,7 @@
 [package]
 name = "lazyxchacha"
-description = "Lazy XChaCha20-Poly1305 in golang base on RustCrypto: ChaCha20Poly1305."
-version = "0.1.0"
+description = "Lazy XChaCha20-Poly1305 in Rust base on RustCrypto: ChaCha20Poly1305."
+version = "0.1.1"
 edition = "2021"
 license-file = "LICENSE"
 keywords = ["lazyxchacha", "xchacha"]
