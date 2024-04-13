@@ -1,6 +1,9 @@
 login:
 	cargo login
 
+config_token:
+	vim ~/.cargo/credentials.toml
+
 publish:
 	cargo publish --dry-run
 
