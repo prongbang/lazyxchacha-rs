@@ -3,6 +3,8 @@ login:
 
 config_token:
 	vim ~/.cargo/credentials.toml
+	vim ~/.zshrc
+	# export CARGO_REGISTRY_TOKEN=token
 
 publish:
 	cargo publish --dry-run
