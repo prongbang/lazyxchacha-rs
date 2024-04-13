@@ -6,7 +6,7 @@ edition = "2021"
 license-file = "LICENSE"
 keywords = ["lazyxchacha", "xchacha"]
 repository = "https://github.com/prongbang/lazyxchacha-rs"
-exclude = ["Makefile", ".gitignore", "benches/", "target/"]
+exclude = ["Makefile", ".gitignore", "/benches/*", "/target/"]
 
 [dependencies]
 chacha20poly1305 = "0.10.1"
