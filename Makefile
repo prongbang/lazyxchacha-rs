@@ -1,3 +1,9 @@
+login:
+	cargo login
+
+publish:
+	cargo publish --dry-run
+
 # make bench
 bench:
 	cargo bench
