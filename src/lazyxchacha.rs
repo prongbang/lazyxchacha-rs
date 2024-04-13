@@ -71,8 +71,8 @@ mod tests {
     fn decrypt() {
         // Given
         let lazyxchacha = LazyXChaCha::new();
-        let shared_key = "edf9d004edae8335f095bb8e01975c42cf693ea60322b75cb7c6667dc836fd7e";
-        let ciphertext = "58b99ca42eaed1949d3d707208b39fc9bd8d8b35d44066c072c4ce44cd004971a66389adbfcb3b59903bc22dd825cf7267c63efda6c86bdb0f62571858ac914af67d7cf92e84738996441afcb141a9f621e795e2d2446e1b75d26ee61187c1680af84b5625c3bc9199f69abfb940dbf90970fd1b53bf51d86524249e3af9132b8fdb09f0cd3303f2e9eeeae8e3333104ebb4463aa7";
+        let shared_key = "e4f7fe3c8b4066490f8ffde56f080c70629ff9731b60838015027c4687303b1d";
+        let ciphertext = "c3b89ce0cb7d7349e8c254ebcaa8f347b7b70df2e6d34bde709a75175ddc18402aec0c55ca9d8754359ba5d9624eac7530a149f4befbfcf396fb4edd9af6103065fac4a56fcb5afe95cbaa064c8c8fef3ddeb1219a0a28bd8228699cd4139a2fe9541cfd67ff3ea05002023c1216001709c42fcfebb658e3fd9df1f24b74d19012b92b2c5af8a397fba773a27cc1a08cbb195e0871";
         let plaintext = r#"{"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIn0.rTCH8cLoGxAm_xw68z-zXVKi9ie6xJn9tnVWjd_9ftE"}"#;
 
         // When
