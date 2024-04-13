@@ -10,12 +10,6 @@ Lazy XChaCha20-Poly1305 in golang base on RustCrypto: ChaCha20Poly1305.
 - Encryption: XChaCha20
 - Authentication: Poly1305
 
-### Install
-
-```shell
-
-```
-
 ### Benchmark
 
 ```shell
