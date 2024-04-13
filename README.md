@@ -40,29 +40,35 @@ Found 8 outliers among 100 measurements (8.00%)
 - Generate KeyPair
 
 ```rust
-
+let keypair = KeyPair::new();
 ```
 
-- Key Exchange
+- Key Exchange & Shared Key
 
 ```rust
+let client_kp = KeyPair::new();
+let server_kp = KeyPair::new();
+let server_pk = server_kp.pk_string();
 
-```
-
-- Shared Key
-
-```rust
-
+let shared_key = SharedKey::new(server_pk, client_kp.sk);
 ```
 
 - Encrypt
 
 ```rust
+let lazyxchacha = LazyXChaCha::new();
+let shared_key = SharedKey::new(server_pk, client_kp.sk);
+let plaintext = r#"{"message": "hi"}"#;
 
+let ciphertext = lazyxchacha.encrypt(plaintext, shared_key);
 ```
 
 - Decrypt
 
 ```rust
+let lazyxchacha = LazyXChaCha::new();
+let shared_key = SharedKey::new(server_pk, client_kp.sk);
+let ciphertext = "58b99ca4a7";
 
+let plaintext = lazyxchacha.decrypt(ciphertext, shared_key);
 ```
