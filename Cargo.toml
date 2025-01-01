@@ -1,7 +1,7 @@
 [package]
 name = "lazyxchacha"
 description = "Lazy XChaCha20-Poly1305 in Rust base on RustCrypto: ChaCha20Poly1305."
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license-file = "LICENSE"
 keywords = ["lazyxchacha", "xchacha"]
@@ -10,7 +10,7 @@ exclude = ["Makefile", ".gitignore", "/target/"]
 
 [dependencies]
 chacha20poly1305 = "0.10.1"
-x25519-dalek = { version = "2.0.1", features = ["getrandom"] }
+x25519-dalek = { version = "2.0.1", features = ["getrandom", "reusable_secrets", "static_secrets"] }
 faster-hex = "0.9.0"
 
 [dev-dependencies]

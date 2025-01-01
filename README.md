@@ -37,6 +37,12 @@ Found 8 outliers among 100 measurements (8.00%)
 let keypair = KeyPair::new();
 ```
 
+or
+
+```rust
+let keypair = StaticKeyPair::new();
+```
+
 - Key Exchange & Shared Key
 
 ```rust
@@ -45,6 +51,17 @@ let server_kp = KeyPair::new();
 let server_pk = server_kp.pk_string();
 
 let shared_key = SharedKey::new(server_pk, client_kp.sk);
+```
+
+or
+
+```rust
+let client_kp = StaticKeyPair::new();
+let server_kp = StaticKeyPair::new();
+let server_pk = server_kp.pk_string();
+let client_sk = client_kp.sk_string();
+
+let shared_key = StaticSharedKey::new(server_pk, client_sk);
 ```
 
 - Encrypt
@@ -57,6 +74,12 @@ let plaintext = r#"{"message": "hi"}"#;
 let ciphertext = lazyxchacha.encrypt(plaintext, shared_key);
 ```
 
+or
+
+```rust
+let ciphertext = lazyxchacha.encrypt_bytes(plaintext, shared_key);
+```
+
 - Decrypt
 
 ```rust
@@ -65,4 +88,10 @@ let shared_key = SharedKey::new(server_pk, client_kp.sk);
 let ciphertext = "58b99ca4a7";
 
 let plaintext = lazyxchacha.decrypt(ciphertext, shared_key);
+```
+
+or 
+
+```rust
+let plaintext = lazyxchacha.decrypt_bytes(ciphertext, shared_key);
 ```
